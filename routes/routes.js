@@ -35,7 +35,8 @@ mongoose.connect(process.env.DB).then(()=>{
 app.use(express.static(path.join(__dirname, "./frontend/build")))
 // "proxy": "http://localhost:4000/",
 app.get("*" , function(req,res){
-   res.sendFile(path.join(__dirname, "./frontend/build/index.html"))
+  const index = path.join(__dirname, "build" ,"index.html")
+   res.sendFile(index)
 });
 
 //
