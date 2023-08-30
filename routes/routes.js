@@ -36,7 +36,7 @@ app.use(express.static(path.join(__dirname, "frontend/build")))
 // "proxy": "http://localhost:4000/",
 app.get("*" , function(req,res){
   const index = path.join(__dirname, "build" ,"index.html")
-  console.log("Accessing route:", req.path);
+  window.alert("Accessing route:", req.path);
    res.sendFile(index)
 });
 
